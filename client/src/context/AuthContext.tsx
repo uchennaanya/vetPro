@@ -23,7 +23,7 @@ interface UserData {
 let API_base_url: string;
 
 if (import.meta.env.MODE === "production") {
-  API_base_url = "anya.uchenna@techwingsglobal.com";
+  API_base_url = "https://vetpro.onrender.com";
   console.log("API_base_url", API_base_url);
 } else {
   API_base_url = "http://localhost:8000/";
