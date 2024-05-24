@@ -1,0 +1,284 @@
+/* Firefox */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+/* Chrome */
+@media (forced-colors: active) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+.stat > div {
+  flex-grow: 1;
+  width: 200px;
+}
+
+.stat small {
+  display: inline-block;
+  text-align: right;
+}
+
+small {
+  text-transform: capitalize;
+}
+.user {
+  display: none !important;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.3em;
+  vertical-align: middle;
+}
+
+table th,
+table td {
+  padding: 0.5em 0 0.5rem 0.2rem;
+}
+
+.contactTD img {
+  display: inline-block;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+address {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0.5rem 0;
+}
+
+.pagination-container {
+  display: flex;
+}
+
+/* Pagination button */
+.pagination-button {
+  margin: 0 7px;
+  padding: 1px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Active pagination button */
+.pagination-button.active {
+  background-color: rgb(118, 147, 234);
+  border: none;
+  color: #fff;
+}
+
+.pagination-button:hover {
+  background-color: #28cdf2;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+tr {
+  padding: 0.1rem;
+}
+
+tr:nth-child(even) {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+tr:hover {
+  background: #ccc;
+}
+
+:focus:invalid:is(input, textarea) {
+  color: red;
+  outline: 1px solid red;
+}
+
+:focus:valid:is(input, textarea) {
+  outline: none;
+}
+
+.pageHero {
+  padding: 1rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border: 1px solid #f1f1f1;
+  border-radius: 7px;
+  padding: 0.4rem;
+  width: 90%;
+  max-width: fit-content;
+}
+
+.search button {
+  background-color: #6c63ff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.search input {
+  background-size: contain;
+  text-indent: 30px;
+}
+
+.searchjob {
+  background: url("./src/assets/img/search.png") no-repeat left center;
+}
+
+.searchmap {
+  background: url("./src/assets/img/map.png") no-repeat center left;
+}
+
+.mission,
+.mission h2 {
+  display: flex;
+  align-items: center;
+}
+
+.mission img {
+  border: 2px dashed blueviolet;
+  padding: 0.4rem;
+  border-radius: 360px;
+}
+
+.mission h2 {
+  font: 500 22px/2rem Roboto;
+  color: #2f2e41;
+  gap: 10px;
+}
+
+.mission p {
+  text-align: justify;
+}
+
+.mission > div {
+  flex: 1;
+  padding: 1rem;
+}
+
+.howitwork li {
+  list-style-image: url("./src/assets/img/shield-check-line.png");
+  margin: 0.9rem 0;
+  list-style-position: inside;
+}
+
+.howitwork span {
+  color: rgb(255, 102, 0);
+  margin-right: 6px;
+}
+
+.section {
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 5px;
+  margin-bottom: 50px;
+  top: 20px;
+}
+
+.section input {
+  width: 100%;
+  background: transparent;
+}
+
+.section div {
+  border-radius: 360px;
+  width: fit-content;
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid;
+}
+
+@media only screen and (min-width: 678px) {
+  .section {
+    position: absolute;
+    left: 50%;
+  }
+  .user {
+    display: flex !important;
+  }
+  .pageHero {
+    padding: 6rem 6rem 2rem;
+  }
+  .search button {
+    width: fit-content;
+  }
+  .search {
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+  }
+
+  .searchjob {
+    border-right: 1px solid;
+  }
+}
